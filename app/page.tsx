@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Home() {
   const [form, setForm] = useState({ name: "", email: "" });
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     await fetch("/api/send", {
